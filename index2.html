@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoMark — Attendance, Simplified</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style1.css">
+    <script type="module" src="script1.js"></script>
+</head>
+
+<body class="light-mode">
+    <header class="site-header" id="header">
+        <nav class="nav wrap">
+            <a class="brand" href="#" data-view="home"><span class="brand-mark">G</span> GeoMark</a>
+            <div class="nav-links" id="desktop-nav">
+                <button data-view="home" class="nav-link active">Home</button>
+                <button data-view="analytics" class="nav-link">Analytics</button>
+                <button data-view="privacy" class="nav-link">Privacy</button>
+                <button data-view="about" class="nav-link">About</button>
+            </div>
+            <div class="nav-actions">
+                <button class="icon-btn" id="theme-toggle" aria-label="Toggle color theme">☾</button>
+                <button class="primary-btn small" id="nav-login">Sign in</button>
+                <button class="icon-btn mobile-menu-btn" id="mobile-menu-button" aria-label="Open menu">☰</button>
+            </div>
+        </nav>
+        <div class="mobile-menu hidden" id="mobile-menu">
+            <button data-view="home">Home</button><button data-view="analytics">Analytics</button>
+            <button data-view="privacy">Privacy</button><button data-view="about">About</button>
+        </div>
+    </header>
+
+    <main class="wrap main-content">
+        <section class="view" id="home-view">
+            <div id="pre-login-view">
+                <section class="hero">
+                    <div class="hero-copy">
+                        <span class="eyebrow"><span class="eyebrow-dot"></span> SMART CAMPUS ATTENDANCE</span>
+                        <h1>Attendance,<br><span>without the hassle.</span></h1>
+                        <p class="hero-description">A simpler way to manage classroom attendance with location-aware
+                            verification, clear records, and helpful insights.</p>
+                        <div class="hero-actions">
+                            <button class="primary-btn" id="get-started-btn">Get started <span>→</span></button>
+                            <button class="secondary-btn" data-scroll="how-it-works">See how it works</button>
+                        </div>
+                        <div class="trust-line"><span class="avatar-stack"><i>✓</i><i>✓</i><i>✓</i></span><span>Built
+                                for students and faculty</span></div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="visual-glow"></div>
+                        <div class="mini-dashboard">
+                            <div class="mini-top">
+                                <div><span class="muted-label">TODAY'S STATUS</span>
+                                    <h3>Attendance overview</h3>
+                                </div><span class="live-pill"><i></i> Demo</span>
+                            </div>
+                            <div class="attendance-ring">
+                                <div class="ring-inner"><strong>92%</strong><span>Attendance</span></div>
+                            </div>
+                            <div class="mini-stats">
+                                <div><span class="stat-dot green"></span><span>Present</span><strong>23</strong></div>
+                                <div><span class="stat-dot orange"></span><span>Absent</span><strong>2</strong></div>
+                            </div>
+                            <div class="mini-class">
+                                <div class="class-icon">⌂</div>
+                                <div><strong>Data Structures</strong><span>10:00 AM – 11:00 AM</span></div><span
+                                    class="status-chip">Upcoming</span>
+                            </div>
+                        </div>
+                        <div class="floating-card location-float"><span class="float-icon">⌖</span>
+                            <div><strong>Location verified</strong><span>Campus zone · Demo</span></div><span
+                                class="check-mark">✓</span>
+                        </div>
+                        <div class="floating-card secure-float"><span class="secure-icon">◇</span>
+                            <div><strong>Privacy first</strong><span>Verification only</span></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="feature-section">
+                    <div class="section-heading"><span class="eyebrow">MADE FOR CAMPUS LIFE</span>
+                        <h2>Everything in one place.</h2>
+                        <p>Simple tools that make attendance easier to manage and understand.</p>
+                    </div>
+                    <div class="feature-grid">
+                        <article class="feature-card">
+                            <div class="feature-icon blue">⌖</div>
+                            <h3>Location verification</h3>
+                            <p>Check whether a student is within the permitted campus area when attendance is submitted.
+                            </p>
+                        </article>
+                        <article class="feature-card">
+                            <div class="feature-icon purple">▤</div>
+                            <h3>Digital attendance</h3>
+                            <p>Keep attendance records organized instead of relying on paper registers.</p>
+                        </article>
+                        <article class="feature-card">
+                            <div class="feature-icon green">▥</div>
+                            <h3>Useful insights</h3>
+                            <p>Review attendance summaries and subject-wise trends in a clear dashboard.</p>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="how-section" id="how-it-works">
+                    <div class="section-heading"><span class="eyebrow">A SIMPLE WORKFLOW</span>
+                        <h2>How GeoMark works</h2>
+                        <p>A prototype of the core attendance flow.</p>
+                    </div>
+                    <div class="steps-grid">
+                        <article class="step"><span>01</span>
+                            <h3>Sign in</h3>
+                            <p>Use a demo student ID to open the student dashboard.</p>
+                        </article>
+                        <article class="step"><span>02</span>
+                            <h3>Check location</h3>
+                            <p>Allow location access when testing the location-check demo.</p>
+                        </article>
+                        <article class="step"><span>03</span>
+                            <h3>Review status</h3>
+                            <p>See the result and review the sample timetable.</p>
+                        </article>
+                        <article class="step"><span>04</span>
+                            <h3>Track progress</h3>
+                            <p>View attendance analytics by subject.</p>
+                        </article>
+                    </div>
+                </section>
+                <section class="cta-banner">
+                    <div><span class="eyebrow">READY TO EXPLORE?</span>
+                        <h2>Make attendance easier to understand.</h2>
+                        <p>Try the interactive GeoMark prototype.</p>
+                    </div><button class="primary-btn light-btn" id="cta-login">Open demo <span>→</span></button>
+                </section>
+            </div>
+
+            <section id="post-login-view" class="hidden dashboard-view">
+                <div class="dashboard-heading">
+                    <div><span class="eyebrow">STUDENT DASHBOARD</span>
+                        <h1>Welcome, <span id="student-id-display">Student</span>.</h1>
+                        <p>Here is your attendance snapshot.</p>
+                    </div><button class="secondary-btn" id="logout-btn">Log out</button>
+                </div>
+                <div class="dashboard-grid">
+                    <article class="dash-card status-card">
+                        <div class="card-title">
+                            <div><span class="muted-label">TODAY'S ATTENDANCE</span>
+                                <h2 id="attendance-title">Not checked yet</h2>
+                            </div><span class="large-status-icon">⌖</span>
+                        </div>
+                        <p id="attendance-message">Check your current location to see a demo result.</p>
+                        <div class="location-result" id="location-info">Location has not been checked.</div><button
+                            class="primary-btn" id="check-location-btn">Check my location</button>
+
+                        <p class="disclaimer">Prototype : location results are not saved.</p>
+                    </article>
+                    <article class="dash-card">
+                        <div class="card-title">
+                            <div><span class="muted-label">THIS SEMESTER</span>
+                                <h2>Attendance summary</h2>
+                            </div><span class="summary-number">88%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div style="width:88%"></div>
+                        </div>
+                        <div class="summary-row"><span>Classes attended</span><strong>44 / 50</strong></div>
+                        <div class="summary-row"><span>Classes missed</span><strong>6</strong></div>
+                        <div class="summary-row"><span>Subjects tracked</span><strong>5</strong></div>
+                    </article>
+                </div>
+                <article class="dash-card timetable-card">
+                    <div class="card-title">
+                        <div><span class="muted-label">YOUR SCHEDULE</span>
+                            <h2>Today's timetable</h2>
+                        </div><span class="demo-tag">Sample data</span>
+                    </div>
+                    <div class="timetable" id="timetable-list"></div>
+                </article>
+            </section>
+        </section>
+
+        <section class="view page-view hidden" id="analytics-view">
+            <div class="page-heading"><span class="eyebrow">YOUR PROGRESS</span>
+                <h1>Attendance analytics</h1>
+                <p>Explore subject-wise attendance data.</p>
+            </div>
+            <div class="analytics-summary">
+                <div class="summary-card"><span>Overall attendance</span><strong>88%</strong><small>Across sample
+                        subjects</small></div>
+                <div class="summary-card"><span>Highest attendance</span><strong>95%</strong><small>Machine Learning
+                        Lab</small></div>
+                <div class="summary-card"><span>Subjects tracked</span><strong>5</strong><small>Demo dataset</small>
+                </div>
+            </div>
+            <div class="chart-card">
+                <div class="chart-header">
+                    <div>
+                        <h2>Subject-wise attendance</h2>
+                        <p>percentages</p>
+                    </div>
+                    <div class="chart-switch"><button id="bar-chart-btn">Bar</button><button id="pie-chart-btn"
+                            class="selected">Doughnut</button></div>
+                </div>
+                <div class="chart-container"><canvas id="attendanceChart"></canvas></div>
+            </div>
+            <p class="note"><strong>Note:</strong> The chart values are hardcoded data</p>
+        </section>
+
+        <section class="view page-view hidden" id="privacy-view">
+            <div class="page-heading"><span class="eyebrow">YOUR DATA MATTERS</span>
+                <h1>Privacy by design.</h1>
+                <p>This section describes intended behavior for the prototype, reviewed privacy policy.
+                </p>
+            </div>
+            <div class="policy-list">
+                <article class="policy-card"><span class="policy-icon">⌖</span>
+                    <div>
+                        <h2>Location data</h2>
+                        <p></p>
+                    </div>
+                </article>
+                <article class="policy-card"><span class="policy-icon">▣</span>
+                    <div>
+                        <h2>Account information</h2>
+                        <p>The login accepts an ID for and verify credentials</p>
+                    </div>
+                </article>
+                <article class="policy-card"><span class="policy-icon">◇</span>
+                    <div>
+                        <h2>Security</h2>
+                        <p>A production system needs server-side authentication, authorization, secure password hashing,
+                            protected API routes, and careful data-retention rules.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="view page-view hidden" id="about-view">
+            <div class="about-hero"><span class="brand-mark big">G</span><span class="eyebrow">ABOUT THE PROJECT</span>
+                <h1>Meet GeoMark.</h1>
+                <p>GeoMark is a learning prototype exploring how location-aware verification and digital records could
+                    support campus attendance workflows.</p>
+            </div>
+            <div class="about-grid">
+                <article class="feature-card">
+                    <div class="feature-icon blue">◎</div>
+                    <h3>Our goal</h3>
+                    <p>Make attendance records easier to manage and review for students and faculty.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon purple">⚙</div>
+                    <h3>Our approach</h3>
+                    <p>Build in small stages: interface, API, authentication, database, validation, and testing.</p>
+                </article>
+            </div>
+            <div class="contact-card">
+                <h2>Project status</h2>
+                <p>This is a frontend-only prototype. It has no real user accounts or persistent attendance records.</p>
+                <button class="primary-btn" data-view="home">Back to home</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="wrap footer-inner"><a class="brand" href="#" data-view="home"><span class="brand-mark">G</span>
+                GeoMark</a><span>GeoMark - take attendance easily</span>
+            <div><button data-view="privacy">Privacy</button><button data-view="about">About</button></div>
+        </div>
+    </footer>
+
+    <div class="modal-backdrop hidden" id="login-modal" role="dialog" aria-modal="true" aria-labelledby="login-title">
+        <div class="login-modal">
+            <button class="modal-close" id="close-modal-btn" aria-label="Close login dialog">×</button>
+            <div class="modal-brand"><span class="brand-mark">G</span></div>
+            <span class="eyebrow centered">WELCOME TO GEOMARK</span>
+            <h2 id="login-title">Sign in to continue</h2>
+            <p class="modal-description">Use ID to explore the student dashboard.</p>
+            <form id="login-form">
+                <label for="unique-id">Student ID</label><input id="unique-id" name="unique-id"
+                    placeholder="e.g. STU1024" autocomplete="username" required>
+                <label for="password">Password</label>
+                <div class="password-wrap"><input id="password" type="password" placeholder="Enter password"
+                        autocomplete="current-password" required><button type="button" id="toggle-password"
+                        aria-label="Show password">◉</button></div>
+                <button type="submit" class="primary-btn submit-btn">Enter demo dashboard <span>→</span></button>
+            </form>
+            <p class="demo-warning">ID passwords are verified</p>
+        </div>
+    </div>
+    <div class="toast hidden" id="toast"></div>
+</body>
+
+</html>
